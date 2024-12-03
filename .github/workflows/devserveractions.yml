@@ -13,7 +13,6 @@ jobs:
     name: Dev-Build
     runs-on: [self-hosted, windows, x64]
     steps:
-    steps:
     - shell: powershell
       run: |
-      cd "B:\Servers\Dev\ForTheMonkeysWebsite\Dev-Branch"; git pull
+        cd "B:\Servers\Dev\ForTheMonkeysWebsite\Dev-Branch"; git pull
