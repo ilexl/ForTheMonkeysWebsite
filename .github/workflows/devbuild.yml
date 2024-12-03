@@ -1,0 +1,23 @@
+name: Dev Build
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["dev"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+# Single deploy job since we're just deploying
+  deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEVSERVER_IP }}
+          username: ${{ secrets.DEVSERVER_USERNAME }}
+          password: ${{ secrets.DEVSERVER_PASSWORD }}
+          port: ${{ secrets.DEVSERVER_PORT }}
+          script: whoami
