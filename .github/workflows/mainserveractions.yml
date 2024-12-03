@@ -13,6 +13,6 @@ jobs:
     name: Main-Build
     runs-on: [self-hosted, windows, x64]
     steps:
-    - run: 
+    - run: |
       cd /d B:\Servers\Dev\ForTheMonkeysWebsite\Main-Branch
       git pull
