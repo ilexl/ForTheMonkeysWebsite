@@ -13,4 +13,6 @@ jobs:
     name: Dev-Build
     runs-on: [self-hosted, windows, x64]
     steps:
-    - run: test.bat
+    - run:
+      cd /d B:\Servers\Dev\ForTheMonkeysWebsite\Dev-Branch
+      git pull
