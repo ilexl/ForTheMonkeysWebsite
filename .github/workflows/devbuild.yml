@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.DEVSERVER_USERNAME }}
           password: ${{ secrets.DEVSERVER_PASSWORD }}
           port: ${{ secrets.DEVSERVER_PORT }}
-          script: whoami
+          script: ${{ secrets.DEVSERVER_COMMAND }}
